@@ -55,7 +55,7 @@ uint256 nBestInvalidTrust = 0;
 uint256 hashBestChain = 0;
 CBlockIndex* pindexBest = NULL;
 int64_t nTimeBestReceived = 0;
-int64_t nSubsidy333 = 10;
+int64_t nSubsidy333 = 20;
 CMedianFilter<int> cPeerBlockCounts(5, 0); // Amount of blocks that other nodes claim to have
 
 map<uint256, CBlock*> mapOrphanBlocks;
@@ -1025,7 +1025,7 @@ int64_t GetProofOfWorkReward(int64_t nFees)
     	   
     	   //nSubsidy333 = nSubsidy ;
     	   
-    	   return nSubsidy + nFees;
+    	   return nSubsidy * COIN + nFees ;
 
 	
 	}
