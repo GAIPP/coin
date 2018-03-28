@@ -7,7 +7,7 @@
 // - If the platform provides a cheap barrier, we use it with raw pointers
 // - If cstdbux is present (on newer versions of gcc, it is), we use
 //   a cstdbux-based BuxPointer.  However we prefer the memory
-//   barrier based version, because at least on a gcc 4.4 32-bit build
+//   barrier  based version, because at least on a gcc 4.4 32-bit build
 //   on linux, we have encountered a buggy <cstdbux>
 //   implementation.  Also, some <cstdbux> implementations are much
 //   slower than a memory-barrier based implementation (~16ns for
